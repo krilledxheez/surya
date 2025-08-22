@@ -1,0 +1,64 @@
+-- here is a overview of suryo and what it is and what it aims to be,
+    -- basically lua like language with 
+        -- manual memory management
+        -- low level features
+        -- c interop
+        -- ease of use
+        -- fun and extensive type system
+    -- suryo stands for the sun in sanskrit
+    -- why a new language?
+        -- good question, there a a lot of reasons,
+        -- for one, usually low level compiled languages are hard to understand
+        -- two, they usually give you too much freedom (c) or too much restrictions (rust)
+            -- this results in them being confusing and not beginner friendly
+        -- three, lua and other interpreted languages are too high level.
+            -- meaning that you cant do a lot of interactions with the hardware that much.
+    -- i want a language this is fun to use and be a joy to write.
+-- GRAMMER:
+    --chunk          ::= block
+    --block          ::= {stat} [retstat]
+    --stat           ::= ';'
+    --                 | varlist '=' explist
+    --                 | functioncall
+    --                 | label
+    --                 | break
+    --                 | goto Name
+    --                 | do block end
+    --                 | while exp do block end
+    --                 | repeat block until exp
+    --                 | if exp then block {elseif exp then block} [else block] end
+    --                 | for Name '=' exp ',' exp [',' exp] do block end
+    --                 | for namelist in explist do block end
+    --                 | function funcname funcbody
+    --                 | local function Name funcbody
+    --                 | local attnamelist ['=' explist]
+    --attnamelist    ::= Name attrib {',' Name attrib}
+    --attrib         ::= ['<' Name '>']
+    --retstat        ::= return [explist] [';']
+    --label          ::= '::' Name '::'
+    --funcname       ::= Name {'.' Name} [':' Name]
+    --varlist        ::= var {',' var}
+    --var            ::= Name | prefixexp '[' exp ']' | prefixexp '.' Name
+    --namelist       ::= Name {',' Name}
+    --explist        ::= exp {',' exp}
+    --exp            ::= nil | false | true | Numeral | LiteralString | '...'
+    --                 | functiondef | prefixexp | tableconstructor | exp binop exp | unop exp
+    --prefixexp      ::= var | functioncall | '(' exp ')'
+    --functioncall   ::= prefixexp args | prefixexp ':' Name args
+    --args           ::= '(' [explist] ')' | tableconstructor | LiteralString
+    --functiondef    ::= function funcbody
+    --funcbody       ::= '(' [parlist] ')' block end
+    --parlist        ::= namelist [',' '...'] | '...'
+    --tableconstructor ::= '{' [fieldlist] '}'
+    --fieldlist      ::= field {fieldsep field} [fieldsep]
+    --field          ::= '[' exp ']' '=' exp | Name '=' exp | exp
+    --fieldsep       ::= ',' | ';'
+    --binop          ::= '+' | '-' | '*' | '/' | '//' | '^' | '%' | '&'
+    --                 | '~' | '|' | '>>' | '<<' | '..'
+    --                 | '<' | '<=' | '>' | '>=' | '==' | '~='
+    --                 | and | or
+    --unop           ::= '-' | not | '#' | '~'
+-- basically lua copy i know, lets implement a compiler in lua for lua,
+    -- then we add features
+    -- lets diverge from the lua philosophy a bit
+
