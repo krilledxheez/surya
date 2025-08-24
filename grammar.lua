@@ -1,5 +1,5 @@
 -- here is a overview of suryo and what it is and what it aims to be,
-    -- basically lua like language with 
+    -- basically lua and a pythonic like language with 
         -- manual memory management
         -- low level features
         -- c interop
@@ -60,5 +60,10 @@
     --unop           ::= '-' | not | '#' | '~'
 -- basically lua copy i know, lets implement a compiler in lua for lua,
     -- then we add features
-    -- lets diverge from the lua philosophy a bit
+    -- lets diverge from the lua philosophy a bit and ad pythonic spice
+    -- lets take a file and args as input and hand it over to the frontend
+
+local inps = {}
+local file = io.input()
+
 
