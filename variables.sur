@@ -1,0 +1,21 @@
+//comments are like comments in c, they start with //
+//here we declare a variable of type name and its type c[] or string
+//notice how c[] has a enclosed square brackets? it is of type character
+//and is given a [] to indicate that it is a array of characters or string
+//the purpose of [] is always to modify or indicate variables, functions
+//types, keywords (yes, keywords), ect.
+//statements are ended with a newline not ;.
+//like most languages '=' means assignment.
+//this language will be space sensitive. 
+
+
+name :c[] = "KrilledXheez"
+age  :i8  = 16
+
+//or a array of ints ;] (how the hell am i supposed to implement this lmao)
+//this is a array of i8 ints (8*8 = 64) taking up 64 bits
+//i8, i16, i32, i64 are signed ints
+//c or byte has 8 bits
+//u8, u16, u32, u64 are unsigned ints
+
+age  :i8[8]= 16, 16, 16, 16, 16, 16, 16, 16

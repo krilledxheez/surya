@@ -62,8 +62,3 @@
     -- then we add features
     -- lets diverge from the lua philosophy a bit and ad pythonic spice
     -- lets take a file and args as input and hand it over to the frontend
-
-local inps = {}
-local file = io.input()
-
-
