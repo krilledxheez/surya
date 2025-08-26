@@ -1,3 +1,7 @@
 
 
-fnc Function()
+fnc main():
+    text: "hello world"
+    syc: stdcout
+    syc: stdexit
+
